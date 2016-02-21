@@ -15,3 +15,6 @@ var qs = querystring()["q"];
 //qs[0] yields the string "something"
 //qs[1] yields the string "somethingelse"
 ```
+
+# See it in action
+[jsfiddle](https://jsfiddle.net/EldonMcGuinness/yhz8umqf/)
