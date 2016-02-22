@@ -11,7 +11,7 @@
  *        instead of the actual page's querystring.
  */
 
-queryString = function(str) {
+querystring = function(str) {
     var qso = {};
     var qs = (str || document.location.search);
 
