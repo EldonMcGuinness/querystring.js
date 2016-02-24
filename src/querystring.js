@@ -36,7 +36,7 @@ queryString = function(str) {
     for (var i=0; i < qs.length; i++){
         var qi = qs[i].split("=");
 
-        qi = map(qi, function (n) {return decodeURIComponent(n)});
+        qi = qi.map(function (n) {return decodeURIComponent(n)});
 
         if (qso[qi[0]] != undefined){
 
@@ -66,13 +66,6 @@ queryString = function(str) {
             //console.log("New key: ["+qi[0]+"]["+qi[1]+"]");
             qso[qi[0]] = qi[1];
         }
-    }
-
-    function map(arr, func){
-        for (var i=0; i<arr.length; i++ ){
-            arr[i] = func(arr[i]);
-        }
-        return arr;
     }
     
     return qso;
