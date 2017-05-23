@@ -1,5 +1,5 @@
 /*
- *  querystring.js - v1.0.0
+ *  querystring.js - v1.0.1
  *  Querystring utility in Javascript
  *  https://github.com/EldonMcGuinness/querystring.js
  *
@@ -21,7 +21,7 @@ querystring = function(str) {
     }
     
     // Normalize the querystring
-    qs = qs.replace(/(^\?)/,'')
+    qs = qs.substring(qs.indexOf("?")+1)
     .replace(/;/g,'&');
     while (qs.indexOf("&&") != -1){
         qs = qs.replace(/&&/g,'&');
