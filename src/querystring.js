@@ -18,7 +18,12 @@ querystring = function(str) {
         .filter(function(part) { return part; })
         .map(function(arg) {
             var parts = arg.split(/=((?!=).*)/);
-            obj[parts[0]] = parts[1] === '' ? null : parts[1];
+            var val = parts[1] === '' ? null : parts[1];
+            if(!obj[parts[0]]) obj[parts[0]] = val;
+            else {
+                if(!Array.isArray(obj[parts[0]])) obj[parts[0]] = [obj[parts[0]]];
+                obj[parts[0]].push(val);
+            }
         });
     
     return obj;
