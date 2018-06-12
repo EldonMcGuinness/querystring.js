@@ -27,4 +27,6 @@ var validMessage = JSON.stringify({
 
 var currentMessage = JSON.stringify(querystring(sourceURL));
 
-console.log( (validMessage === currentMessage) ? 1 : 0 );
+if (validMessage !== currentMessage){
+	throw new Error("Output Test Failure");
+};
