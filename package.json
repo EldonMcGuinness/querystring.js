@@ -1,0 +1,7 @@
+{
+  "name": "querystring.js",
+  "version": "1.0.0",
+  "scripts": {
+    "test": "node test/output-test.js"
+  }
+}

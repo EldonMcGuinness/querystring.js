@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/EldonMcGuinness/querystring.js.svg?branch=master)](https://travis-ci.org/EldonMcGuinness/querystring.js)
+
 # querystring.js
 A pure JS way of gaining access to the querystring.
 
