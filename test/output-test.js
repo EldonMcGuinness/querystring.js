@@ -27,6 +27,4 @@ var validMessage = JSON.stringify({
 
 var currentMessage = JSON.stringify(querystring(sourceURL));
 
-if (validMessage !== currentMessage){
-	throw new Error("Output Test Failure");
-};
+assert.deepStrictEqual( currentMessage, validMessage, "Invalid output from parsing!" );

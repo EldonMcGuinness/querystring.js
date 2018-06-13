@@ -2,6 +2,11 @@
   "name": "querystring.js",
   "version": "1.0.0",
   "scripts": {
-    "test": "node test/output-test.js"
+    "test": "npm run jshint && npm run unittest",
+    "jshint": "jshint src/querystring.js",
+    "unittest": "node test/output-test.js"
+  },
+  "devDependencies": {
+    "jshint": "^2.9.5"
   }
 }

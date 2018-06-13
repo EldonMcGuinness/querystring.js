@@ -57,7 +57,7 @@ var querystring = function( str ) {
     qs.map( buildQueryStringObject );
     
     return qso;
-}
+};
 
 module.exports = querystring;
 
