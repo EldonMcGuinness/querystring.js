@@ -1,5 +1,5 @@
-var assert = require('assert'),
-    querystring = require('../src/querystring');
+var assert = require("assert"),
+    querystring = require("../src/querystring");
 
 
 var sourceURL = "www.google.com/?foo=bar&foo=boo&roo=bar;bee=bop;=ghost;=ghost2;&;checkbox%5B%5D=b1;checkbox%5B%5D=b2;dd=;http=http%3A%2F%2Fw3schools.com%2Fmy%20test.asp%3Fname%3Dst%C3%A5le%26car%3Dsaab&http=http%3A%2F%2Fw3schools2.com%2Fmy%20test.asp%3Fname%3Dst%C3%A5le%26car%3Dsaab";
