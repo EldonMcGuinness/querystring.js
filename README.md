@@ -3,6 +3,14 @@
 # querystring.js
 A pure JS way of gaining access to the querystring.
 
+# Installation
+## Via CDN
+There is an unminified and minified version of the code. We recommend the minified version (the top one) for best use in web development but the unminified version (the bottom one) for development.
+```html
+<script crossorigin src="https://cdn.jsdelivr.net/gh/notJudahRR/querystring.js/dist/querystring.min.js"></script>
+<script crossorigin src="https://cdn.jsdelivr.net/gh/notJudahRR/querystring.js/src/querystring.js"></script>
+```
+
 # How to use
 ## To copy the entire querystring object into a variable 
 ```javascript
