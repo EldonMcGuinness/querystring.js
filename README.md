@@ -11,6 +11,12 @@ There is an unminified and minified version of the code. We recommend the minifi
 <script crossorigin src="https://cdn.jsdelivr.net/gh/notJudahRR/querystring.js/src/querystring.js"></script>
 ```
 
+## Via Node.js
+You can also import through Node.js
+```javascript
+const querystring = require("querystring.js")
+```
+
 # How to use
 ## To copy the entire querystring object into a variable 
 ```javascript
