@@ -1,4 +1,4 @@
-[![Codacy Badge](https://api.codacy.com/project/badge/Grade/a4c1281442204b7090a037f8f85e38aa)](https://www.codacy.com/app/EldonMcGuinness/querystring.js?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=EldonMcGuinness/querystring.js&amp;utm_campaign=Badge_Grade) [![Build Status](https://travis-ci.org/EldonMcGuinness/querystring.js.svg?branch=master)](https://travis-ci.org/EldonMcGuinness/querystring.js)
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/a4c1281442204b7090a037f8f85e38aa)](https://www.codacy.com/app/EldonMcGuinness/querystring.js?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=EldonMcGuinness/querystring.js&amp;utm_campaign=Badge_Grade) [![Build Status](https://travis-ci.org/EldonMcGuinness/querystring.js.svg?branch=master)](https://travis-ci.org/EldonMcGuinness/querystring.js)[![Github License](https://img.shields.io/badge/license-MIT-blue)](https://github.com/EldonMcGuinness/querystring.js/blob/master/LICENSE)
 
 # querystring.js
 A pure JS way of gaining access to the querystring.
