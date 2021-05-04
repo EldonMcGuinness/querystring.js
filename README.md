@@ -14,7 +14,7 @@ There is an unminified and minified version of the code. We recommend the minifi
 ## Via Node.js
 You can also import through Node.js
 ```javascript
-const querystring = require("querystring.js")
+const querystring = require("./querystring.js")
 ```
 
 # How to use
