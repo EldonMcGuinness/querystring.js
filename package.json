@@ -7,6 +7,6 @@
     "unittest": "node test/output-test.js"
   },
   "devDependencies": {
-    "jshint": "^2.9.5"
+    "jshint": "^2.13.6"
   }
 }
