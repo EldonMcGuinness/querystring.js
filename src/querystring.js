@@ -1,5 +1,5 @@
 /*
- *  querystring.js - v1.1.1
+ *  querystring.js - v2.0
  *  Querystring utility in Javascript
  *  https://github.com/EldonMcGuinness/querystring.js
  *
