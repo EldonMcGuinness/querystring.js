@@ -51,6 +51,6 @@ function querystring(str = document.location.search) {
     return query("?", str);
 }
 
-function queryhash(str = document.location.search) {
+function queryhash(str = document.location.hash) {
     return query("#", str);
 }
