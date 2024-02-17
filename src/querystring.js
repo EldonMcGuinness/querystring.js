@@ -4,63 +4,53 @@
  *  https://github.com/EldonMcGuinness/querystring.js
  *
  *  Made by Eldon McGuinness
+ *  Optimized by notchyves
  *  Under MIT License
  *
- *  Parameters:
- *  str - A string that you want the script to treat as the querystring
- *        instead of the actual page's querystring.
- */
 
-var querystring = function( str ) {
+    query(type, str)
+        - purpose: This is the core function, renamed to support multiple query types.
+        - type: This defines the type of query being decoded: 
+            - "?", this denotes it is a querystring
+            - "#", this denotes it is a hash string
+        - str: This is the string to be parsed.
 
-    var qso = {};
-    var qs = ( str || document.location.search );
+    querystring(str)
+        - purpose: This function is utilized to parse query strings.
+        - str: (optional) This is the string to be parsed.
 
-    function sortItem( key, val, qso ){
-        if ( typeof( key ) === "string" ) {
-            qso[ key ] = [ qso[ key ], val ];
+    queryhash(str)
+        - purpose: This function is utilized to parse hash strings.
+        - str: (optional) This is the string to be parsed. 
+*/
 
-        }else if (typeof( qso[ key ] ) === "object"){
-            qso[ key ].push( val );
-
-        }
-    }
-
-    function parseQueryItem( qso, qs ){
-        var item = qs.split( "=" );
-
-        item = item.map( function (n) {return decodeURIComponent(n);} );
-        var key = item[0];
-        var val = ( item[1] === "" ) ? null : item[1];
-
-        if ( key in qso ){
-            // If a key already exists then make this an object
-            sortItem( key, val, qso );
-
-        }else{
-            // If no key exists just set it as a string
-            qso[ key ] = val;
-        }
-    }
-
-    // Check for an empty querystring
-    if ( qs === "" ){
-        return qso;
-    }
-
-    // Normalize the querystring
-    qs = qs.substring( qs.indexOf( "?" ) +1 )
-      .replace( /;/g, "&" )
-      .replace( /&&+/g, "&" )
-      .replace(/&$/,"");
-
-    // Break the querystring into parts
-    qs = qs.split( "&" );
-
-    // Build the querystring object
-    qs.map( parseQueryItem.bind( null, qso ) );
+function query(type, str) {
+    const qso = {};
     
-    return qso;
-};
+    const qs = str.substring(str.indexOf(type) + 1)
+        .replace(/;/g, "&")
+        .replace(/&&+/g, "&")
+        .replace(/&$/, "")
+        .split("&");
 
-module.exports = querystring;
+    qs.forEach(part => {
+        if (part === "") return;
+        const [key, val] = part.split("=").map(decodeURIComponent);
+        const value = val === "" ? null : val;
+        if (qso.hasOwnProperty(key)) {
+            qso[key] = [].concat(qso[key], value);
+        } else {
+            qso[key] = value;
+        }
+    });
+
+    return qso;
+}
+
+function querystring(str = document.location.search) {
+    return query("?", str);
+}
+
+function queryhash(str = document.location.search) {
+    return query("#", str);
+}
